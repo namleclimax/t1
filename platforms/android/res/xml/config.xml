@@ -10,10 +10,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>Nhìn trộm - Nozoki Ana</name>
+    <name>Test 0103 t1</name>
     <description>
-Kido Tatsuhiko chuyển tới sống ở Tokyo để học đại học. Trong căn phòng mới của cậu, có một lỗ hổng nhỏ. Lúc đầu, cậu không thể thấy được gì qua cái lỗ đó. Nhưng rồi một đêm, nhòm qua lỗ hổng, cậu bỗng thấy một cô gái đang... Một cuộc sống mới của cậu bắt đầu mở ra từ đây khi qua lỗ hổng đó, cậu có thể nhìn thấy được những hành động tự nhiên nhất của một cô gái..
-
+        test 0013 t1
 </description>
     <author email="info@apptruyen.com" href="http://apptruyen.com">
         App truyen

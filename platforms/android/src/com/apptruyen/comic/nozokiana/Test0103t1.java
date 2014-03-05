@@ -22,7 +22,7 @@ package com.apptruyen.comic.nozokiana;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class NhntrmNozokiAna extends CordovaActivity 
+public class Test0103t1 extends CordovaActivity 
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
