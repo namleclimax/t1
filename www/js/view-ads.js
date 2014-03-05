@@ -25,7 +25,7 @@ $(document).ready(function() {
 		 },
 	});
 	
-	myInterval =  setInterval(load_advertising,3000);
+	//myInterval =  setInterval(load_advertising,3000);
 	function load_advertising(){
 		if (admod_andoid != "") {
 		}else{
