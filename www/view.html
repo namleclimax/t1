@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comic Vietnam</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./css/theme.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
+    <div class="row margin-10">
+        <div class="col-xs-2 text-center pointer" id="chapter_previous">
+            <span class="ion-ios7-skipbackward blue"></span>
+        </div>
+        <div class="col-xs-2 text-center pointer" id="zoom_in">
+            <span class="ion-plus-circled blue"></span>
+        </div>
+        <div class="col-xs-4 middle text-center blue">
+            <a href="" class="title"></a>
+        </div>
+        <div class="col-xs-2 text-center pointer" id="zoom_out">
+            <span class="ion-minus-circled blue"></span>
+        </div>
+        <div class="col-xs-2  text-center pointer" id="chapter_next">
+            <span class="ion-ios7-skipforward blue"></span>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid main main-view">
+    <div class="loading"><img src="./images/ajax-loader.gif"></div>
+    <div class="view-container" id="main"></div>
+
+</div>
+<!-- /container -->
+
+<nav id="maxads-footer" class="navbar navbar-default navbar-fixed-bottom text-center" role="navigation">
+    <div id="maxads"></div>
+</nav>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.10.2.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script type="text/javascript" src="js/AdMob.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/view-ads.js"></script>
+<script type="text/javascript" src="js/mycomic.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        var current = 0;
+        var count = 0;
+        var nextid = 0;
+        var previousid = 0;
+        var hidden = 0;
+
+
+        function get_remote_chapter(id) {
+            current = 0;
+            count = 0;
+
+            if (id == 0) {
+                id = GetURLParameter("id");
+            }
+            story = GetURLParameter("story");
+
+
+            $.ajax({
+                url: "http://comic.apptruyen.com/service.php?action=hinh-chapter&id=" + id,
+                dataType: 'jsonp',
+                success: function (data) {
+
+                    // save last read chapter to storage
+                    html5rocks.webdb.savelastread(story, id, data.title);
+
+                    $.each(data.images, function (key, value) {
+                        if (count == 0)
+                            $(".view-container").append('<div class="img-loading"><img class="swiper-slide img-show" id="img_' + count + '" src="' + value.image + '"></div>');
+                        else
+                            $(".view-container").append('<img class="swiper-slide img-show" id="img_' + count + '" src="' + value.image + '">');
+                        count++;
+                    });
+                    max = count;
+                    $(".swiper-slide").css("width", $(window).width());
+                    $(".loading").hide();
+                    previousid = data.previous;
+                    nextid = data.next;
+                    $(".title").html("<span class='ion-home'></span> " + data.title);
+                    $('.title').attr('href', 'index.html?admob=true&story=' + story);
+
+                },
+                error: function () {
+                    alert("Error");
+                }
+            });
+        }
+
+        //chuyen chapter trong truyen
+        $("#chapter_previous").click(function () {
+
+            $(".view-container").empty();
+            $(".loading").show();
+            if (previousid != null) get_remote_chapter(previousid); else get_remote_chapter(nextid);
+
+        });
+
+        $("#chapter_next").click(function () {
+            $(".view-container").empty();
+            $(".loading").show();
+
+            if (nextid != null) get_remote_chapter(nextid); else get_remote_chapter(previousid);
+
+        });
+        var device_size = $(window).width();
+        $("#zoom_in").click(function () {
+            device_size = device_size * 150 / 100;
+            $(".swiper-slide").css("width", device_size);
+        });
+        $("#zoom_out").click(function () {
+            device_size = device_size * 100 / 150;
+            if (device_size <= $(window).width()) device_size = $(window).width();
+            $(".swiper-slide").css("width", device_size);
+        });
+
+
+        //default get chapter boi duong dan
+        get_remote_chapter(0);
+        $("#main").show();
+
+    });
+</script>
+</body>
+</html>

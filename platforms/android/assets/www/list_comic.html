@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comic Vietnam</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./css/theme.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
+    <div class="row padding-20 my-menu">
+        <a class="col-xs-6 text-center selected" href="list_comic.html">
+            TRUYỆN KHÁC
+        </a>
+        <a class="col-xs-6 text-center" a href="my_comic.html">
+            ĐÃ XEM
+        </a>
+    </div>
+</nav>
+
+<!-- Static navbar -->
+<div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" onclick="toggle();">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Xếp theo lượt xem trong: </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li id="nav-view" onclick="localStorage.order='view';location.reload();"><a href="#">Tất cả</a></li>
+                <li id="nav-ngay" onclick="localStorage.order='ngay';location.reload();"><a href="#">Ngày</a></li>
+                <li id="nav-tuan" onclick="localStorage.order='tuan';location.reload();"><a href="#">Tuần</a></li>
+                <li id="nav-thang" onclick="localStorage.order='thang';location.reload();"><a href="#">Tháng</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+</div>
+
+<div class="container-fluid">
+    <div class="loading"><img src="./images/ajax-loader.gif"></div>
+
+    <table class="table table-hover" id="table-ds-truyen">
+        <thead>
+        <tr id="title">
+            <th>Truyện</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<!-- /container -->
+
+<nav id="maxads-footer" class="navbar navbar-default navbar-fixed-bottom text-center" role="navigation">
+    <div id="maxads"></div>
+</nav>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.10.2.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!--
+	<script type="text/javascript" src="phonegap.js"></script>
+-->
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/ads.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var url = 'http://comic.apptruyen.com/service.php?action=all';
+
+        // default order by total view
+        if(localStorage.order == undefined) localStorage.order = 'view';
+        var order = localStorage.order;
+
+        // get json url, server order not client
+        url += '&order=' + order;
+
+        // hightlight order choice
+        $('#nav-' + order).addClass('active');
+
+        var page = GetURLParameter('page');
+        if (page == undefined) page = 1;
+        url += '&page=' + page;
+        $.ajax({
+            url: url,
+            dataType: 'jsonp',
+            success: function (data) {
+                var title;
+
+                $.each(data.comic, function (key, value) {
+                    var append = '<tr onclick="location.href=\'index.html?story=' + value.id + '\'" ><td>' +
+                            value.title + '</td><td>';
+                    var append_end = '</td></tr>';
+                    switch (order){
+                        case 'view':
+                            append += value.views + append_end;
+                            title = 'Tất cả';
+                            break;
+                        case 'ngay':
+                            append += value.day_view + append_end;
+                            title = 'Ngày';
+                            break;
+                        case 'tuan':
+                            append += value.weekview + append_end;
+                            title = 'Tuần';
+                            break;
+                        case 'thang':
+                            append += value.month_view + append_end;
+                            title = 'Tháng';
+                            break;
+                    }
+                    $("#table-ds-truyen").append(append);
+
+                });
+                // append title with down arrow symbol
+                $('#title').append('<th style="white-space: nowrap">' + title + '<span class="ion-arrow-down-b"/></th>');
+
+                // append 'view more' button
+                page++;
+                $("#table-ds-truyen").append('<tr onclick="location.href=\'list_comic.html?page=' + (page) + '\'"><td>' +
+                        '<a href="#" >View More</a></td><td></td>');
+
+                // bottom padding
+                $("#table-ds-truyen").append('<tr><td></td></tr>');
+
+                // hide loading spinner, show content
+                $(".loading").hide();
+            },
+            error: function () {
+                alert("Error");
+            }
+        });
+        var more = 0;
+        $("#description").click(function () {
+            if (more == 0) {
+                $(".complete").show();
+                $(".more").hide();
+                more = 1;
+            } else {
+                $(".complete").hide();
+                $(".more").show();
+                more = 0;
+            }
+            $("#description").css({
+                'height': 'auto'
+            });
+        });
+        $("#main").show();
+    });
+    var toggleState = '';
+    function toggle(){
+        if(toggleState==='in') {
+            $('.navbar-collapse').removeClass('in');
+            toggleState = '';
+        } else {
+            $('.navbar-collapse').addClass('in');
+            toggleState = 'in';
+        }
+    }
+</script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
+</html>
