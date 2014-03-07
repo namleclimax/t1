@@ -22,7 +22,7 @@ $(document).ready(function() {
 		 },
 		 error:function(){
 			 alert("Error");
-		 },
+		 }
 	});
 	
 	//myInterval =  setInterval(load_advertising,3000);

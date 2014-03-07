@@ -1,28 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.apptruyen.comic.nozokiana" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Test 0103 t1</name>
+<widget id="apptruyen.comic.olongvien" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Ô Long Viện</name>
     <description>
-        test 0013 t1
+        Truyện xoay quanh ngôi chùa Ô Long Viện (gọi là Thuyền Viện Ô Long chứ nhảy). Tuyến nhân vật rất đa dạng, có gần 1 trăm nhân vật, mỗi người mang một tính cách và đẳng cấp "khùng" khác nhau. Truyện bắt được nhiều yếu tố, điển tích, tích, thuyết cổ xưa và phiều tình tiết hiện đại. Xem lại bạn có thể thấy nhiều tình tiết trong truyện được các đạo diễn trunng Quốc dựng thành các đoạn hài trong film của (có cả Châu Tinh Trì) , Thỉnh thoảng 1 vài truyện cười mang tính triết lý và độ cao thâm sâu sắc.
 </description>
     <author email="info@apptruyen.com" href="http://apptruyen.com">
         App truyen
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
+	<preference name="fullscreen" value="true" />
     <preference name="permissions" value="none" />
+	<preference name="phonegap-version" value="3.1.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="false" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
-    <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
@@ -37,15 +33,5 @@
     <icon gap:platform="webos" src="res/icon/webos/icon-64.png" />
     <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
-    <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
-    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
-    <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="http://127.0.0.1*" />
+    <access origin="*" />
 </widget>

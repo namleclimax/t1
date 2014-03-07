@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.apptruyen.comic.nozokiana;
+package apptruyen.comic.olongvien;
 
 public final class R {
     public static final class attr {
