@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="97a08e2e-7d1d-4598-9c13-80b537e17082" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ads.js" afterPath="$PROJECT_DIR$/js/ads.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view-ads.js" afterPath="$PROJECT_DIR$/js/view-ads.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view.html" afterPath="$PROJECT_DIR$/view.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +27,8 @@
       <file leaf-file-name="list_comic.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/list_comic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="42" selection-start="3538" selection-end="3541" vertical-scroll-proportion="11.784314" vertical-offset="2216" max-vertical-offset="3451">
-              <folding>
-                <marker date="1393835610086" expanded="false" signature="5558:5577" placeholder="..." />
-              </folding>
+            <state line="95" column="42" selection-start="3547" selection-end="3550" vertical-scroll-proportion="0.0" vertical-offset="2216" max-vertical-offset="3451">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,7 +36,7 @@
       <file leaf-file-name="my_comic.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_comic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="46" selection-start="2340" selection-end="2343" vertical-scroll-proportion="-4.1372547" vertical-offset="1013" max-vertical-offset="2091">
+            <state line="72" column="46" selection-start="2340" selection-end="2343" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
@@ -52,7 +45,7 @@
       <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="39" selection-start="2742" selection-end="2742" vertical-scroll-proportion="9.784314" vertical-offset="1740" max-vertical-offset="2856">
+            <state line="73" column="39" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2856">
               <folding />
             </state>
           </provider>
@@ -61,25 +54,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="29" selection-start="2424" selection-end="2424" vertical-scroll-proportion="6.529412" vertical-offset="1591" max-vertical-offset="2686">
+            <state line="94" column="29" selection-start="2989" selection-end="2989" vertical-scroll-proportion="12.807693" vertical-offset="1931" max-vertical-offset="3026">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="47" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="986">
+            <state line="36" column="9" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.8262774" vertical-offset="46" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ads.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ads.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ads.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.2922636" vertical-offset="0" max-vertical-offset="1190">
+            <state line="38" column="52" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -182,6 +175,14 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -190,14 +191,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -312,12 +305,38 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="39" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="29" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.0" vertical-offset="1591" max-vertical-offset="2686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="47" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ads.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/list_comic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="44" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="3451">
-          <folding>
-            <marker date="1393835610086" expanded="false" signature="5558:5577" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -356,44 +375,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my_comic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="46" selection-start="2340" selection-end="2343" vertical-scroll-proportion="-4.1372547" vertical-offset="1013" max-vertical-offset="2091">
+        <state line="72" column="46" selection-start="2340" selection-end="2343" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="39" selection-start="2742" selection-end="2742" vertical-scroll-proportion="9.784314" vertical-offset="1740" max-vertical-offset="2856">
+        <state line="73" column="39" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2856">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/list_comic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="42" selection-start="3538" selection-end="3541" vertical-scroll-proportion="11.784314" vertical-offset="2216" max-vertical-offset="3451">
-          <folding>
-            <marker date="1393835610086" expanded="false" signature="5558:5577" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="47" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="29" selection-start="2424" selection-end="2424" vertical-scroll-proportion="6.529412" vertical-offset="1591" max-vertical-offset="2686">
+        <state line="95" column="42" selection-start="3547" selection-end="3550" vertical-scroll-proportion="0.0" vertical-offset="2216" max-vertical-offset="3451">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ads.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.2922636" vertical-offset="0" max-vertical-offset="1190">
+        <state line="38" column="52" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="29" selection-start="2989" selection-end="2989" vertical-scroll-proportion="12.807693" vertical-offset="1931" max-vertical-offset="3026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="9" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.8262774" vertical-offset="46" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
