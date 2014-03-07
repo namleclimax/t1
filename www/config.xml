@@ -21,14 +21,5 @@
 
     <icon src="icon.png" />
     <gap:splash src="icon.png" />
-    <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
-    <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
-    <icon gap:density="hdpi" gap:platform="android" src="res/icon/android/icon-72-hdpi.png" />
-    <icon gap:density="xhdpi" gap:platform="android" src="res/icon/android/icon-96-xhdpi.png" />
-    <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="webos" src="res/icon/webos/icon-64.png" />
-    <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
-    <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
     <access origin="*" />
 </widget>
