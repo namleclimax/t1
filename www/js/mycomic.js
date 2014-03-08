@@ -10,10 +10,10 @@ html5rocks.webdb.open = function() {
 html5rocks.webdb.createTable = function() {
   var db = html5rocks.webdb.db;
   db.transaction(function(tx) {
-    tx.executeSql("CREATE TABLE IF NOT EXISTS mycomic(comic_id INTEGER PRIMARY KEY ASC, comic_title TEXT, views INTEGER, " +
-        "weekview INTEGER, lastchapterid INTEGER, lastchaptertitle TEXT)", []);
+    tx.executeSql("CREATE TABLE IF NOT EXISTS mycomic(comic_id INTEGER PRIMARY KEY ASC, comic_title TEXT, " +
+        "views INTEGER, weekview INTEGER, lastchapterid INTEGER, lastchaptertitle TEXT)", []);
   });
-}
+};
 
 html5rocks.webdb.addComic = function(comic_id,comic_title,comic_views,comic_weekview) {
   var db = html5rocks.webdb.db;
@@ -23,16 +23,16 @@ html5rocks.webdb.addComic = function(comic_id,comic_title,comic_views,comic_week
         html5rocks.webdb.onSuccess,
         html5rocks.webdb.onError);
    });
-}
+};
 
 html5rocks.webdb.onError = function(tx, e) {
   console.log("There has been an error: " + e.message);
-}
+};
 
 html5rocks.webdb.onSuccess = function(tx, e) {
   // re-render the data.
   console.log("Store data success: " + e.message);
-}
+};
 
 html5rocks.webdb.savelastread = function(comic_id, chapid, chaptitle) {
   var db = html5rocks.webdb.db;
@@ -66,38 +66,7 @@ html5rocks.webdb.loadlastread = function() {
         $(".loading").hide(); 
     },html5rocks.webdb.onError);
   });
-}
-
-html5rocks.webdb.getAllTodoItems = function(renderFunc) {
-  var db = html5rocks.webdb.db;
-  db.transaction(function(tx) {
-    tx.executeSql("SELECT * FROM mycomic", [], renderFunc,
-        html5rocks.webdb.onError);
-  });
-}
-
-html5rocks.webdb.deleteTodo = function(id) {
-  var db = html5rocks.webdb.db;
-  db.transaction(function(tx){
-    tx.executeSql("DELETE FROM todo WHERE ID=?", [id],
-        html5rocks.webdb.onSuccess,
-        html5rocks.webdb.onError);
-    });
-}
-
-function loadTodoItems(tx, rs) {
-  var rowOutput = "";
-  var todoItems = document.getElementById("todoItems");
-  for (var i=0; i < rs.rows.length; i++) {
-    rowOutput += renderTodo(rs.rows.item(i));
-  }
-
-  todoItems.innerHTML = rowOutput;
-}
-
-function renderTodo(row) {
-  return "<li>" + row.todo  + " [<a href='javascript:void(0);'  onclick='html5rocks.webdb.deleteTodo(" + row.ID +");'>Delete</a>]</li>";
-}
+};
 
 function init() {
   html5rocks.webdb.open();
@@ -108,3 +77,4 @@ init();
 function storeComictoDb(comic_id,comic_title,comic_views,comic_weekview) {
   html5rocks.webdb.addComic(comic_id,comic_title,comic_views,comic_weekview);
 }
+

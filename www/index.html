@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -16,157 +16,166 @@
     <!-- Custom styles for this template -->
     <link href="./css/theme.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-	
-  </head>
 
-  <body>
+</head>
+
+<body>
 
 
+<nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
+    <div class="row margin-10 text-center blue" id="comic_title">
 
-	<nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
-		<div class="row margin-10 text-center blue" id="comic_title">
-            
-        </div>
-	</nav>
-		
-	
-    <div class="container-fluid" >
-		<div class="loading"><img src="./images/ajax-loader.gif"></div>
-		<div class="thongtintruyen">
-		<img  itemprop="image"  src="" id="thumb">
-			<ul class="list-unstyled">
-				<li>Số chương: <span id="chapter_total" class="max"></span></li>
-				<li>Có <span id="view"  class="max"></span> người đã xem truyện này</li>
-				<li>Trạng thái: <span>Đã hoàn thành</span></li>
-				
+    </div>
+</nav>
 
-				<li id="description" class="show-small">
-					
-				</li>
-			</ul>
-		</div>
-		<div class="clearfix"></div>
-		<div class="row margin-10 my-menu">
-            <a class="col-xs-4 text-center selected" href="index.html">
-				CHƯƠNG
-            </a>
-			<a class="col-xs-4 text-center" href="list_comic.html">
-				TRUYỆN KHÁC
-            </a>
-            <a class="col-xs-4 text-center" href="my_comic.html">
-               ĐÃ XEM
-            </a>
-			
-        </div>
-        <ul class="list-group groups">
-            
+
+<div class="container-fluid">
+    <div class="loading"><img src="./images/ajax-loader.gif"></div>
+    <div class="thongtintruyen">
+        <img itemprop="image" src="" id="thumb">
+        <ul class="list-unstyled">
+            <li>Số chương: <span id="chapter_total" class="max"></span></li>
+            <li>Có <span id="view" class="max"></span> người đã xem truyện này</li>
+            <li>Trạng thái: <span>Đã hoàn thành</span></li>
+
+
+            <li id="description" class="show-small">
+
+            </li>
         </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row margin-10 my-menu">
+        <a class="col-xs-4 text-center selected" href="index.html">
+            CHƯƠNG
+        </a>
+        <a class="col-xs-4 text-center" href="list_comic.html">
+            TRUYỆN KHÁC
+        </a>
+        <a class="col-xs-4 text-center" href="my_comic.html">
+            ĐÃ XEM
+        </a>
 
-    </div> <!-- /container -->
+    </div>
+    <ul class="list-group groups">
 
-	<nav id="maxads-footer" class="navbar navbar-default navbar-fixed-bottom text-center" role="navigation">
-			<div id="maxads"></div>
-			<div id="inmobile-ad-slot" style="text-align:center">
-				<script type="text/javascript">
-					var inmobi_conf = {
-					siteid : "d38ec5331bbd437ea6ca02e19b411bec",
-					slot : "15",
-					test: true,
-					manual: true
-					};
-					</script>
-			</div>
-	</nav>
-	
+    </ul>
+
+</div>
+<!-- /container -->
+
+<nav id="maxads-footer" class="navbar navbar-default navbar-fixed-bottom text-center" role="navigation">
+    <div id="maxads"></div>
+    <div id="inmobile-ad-slot" style="text-align:center">
+        <script type="text/javascript">
+            var inmobi_conf = {
+                siteid: "d38ec5331bbd437ea6ca02e19b411bec",
+                slot: "15",
+                test: true,
+                manual: true
+            };
+        </script>
+    </div>
+</nav>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery-1.10.2.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script> 
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.10.2.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
 
-	<script type="text/javascript" src="phonegap.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/mycomic.js"></script>
-    <script type="text/javascript" src="js/ads.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="js/mycomic.js"></script>-->
+<script type="text/javascript" src="js/ads.js"></script>
+<script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
+<script type="text/javascript" src="js/indexeddb.js"></script>
 
-	<script type="text/javascript">
- var inmobi_conf = {
- siteid : "d38ec5331bbd437ea6ca02e19b411bec",
- slot : "15",
- test : true,
- testdeviceid: "HTC One X"
-};
-</script><script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
-	
-	 <script>
-	$(document).ready(function() { 
-		current_story = 4280;
-		
-		var comic_id;
-		var comic_title;
-		var comic_views;
-		var comic_weekview;
-		
-		var pos = window.location.href.split("story=");
-		var story =pos[1];
-		if (story == 'undefined' ||  story == null) story = current_story;
-		$.ajax({
-			 url:"http://comic.apptruyen.com/service.php?action=detail_story&id="+story,
-			 dataType: 'jsonp', 
-			 success:function(data){
-				$.each( data.chapter, function( key, value ) {
-				$(".list-group").append('<a href="view.html?id=' + value.id + '&story=' + story +'"><li class="list-group-item"><span class="badge"><span class="ion-chevron-right"></span></span><span class="ion-navicon-round"><span class="link-text"> ' + value.title + '</span></span></li></a>');
-				});
-				$(".loading").hide(); 
-				$(".thongtintruyen").show(); 
-				$("#comic_title").html(data.title);
-				$("#thumb").attr("src", "http://comic.apptruyen.com/timthumb.php?src=" + data.thumb + "&w=120&h=180");
-				$("#view").html(data.view);
-				$("#description").html(data.description);
-				
-				$("#chapter_total").html(data.chapter_total);
-				
-				comic_id = story;
-				comic_title = data.title;
-				comic_views = data.view;
-				comic_weekview = data.view;
-				storeComictoDb(comic_id,comic_title,comic_views,comic_weekview);
-			 },
-			 error:function(){
-				 alert("Error");
-			 }
-		});
-		var more = 0;
-		$("#description").click(function(){
-			if (more ==0){
-				$(".complete").show();
-				$(".more").hide();
-				more = 1;
-			}else{
-				$(".complete").hide();
-				$(".more").show();
-				more = 0;
-			}
-			$("#description").css({
-					'height': 'auto'
-				});
-		});
-		$("#main").show();
-	});
-  </script>
-  <script type="text/javascript">
-            app.initialize();
-  </script>
-  </body>
+<script type="text/javascript">
+    var inmobi_conf = {
+        siteid: "d38ec5331bbd437ea6ca02e19b411bec",
+        slot: "15",
+        test: true,
+        testdeviceid: "HTC One X"
+    };
+</script>
+<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
+
+<script>
+    $(document).ready(function () {
+        current_story = 4280;
+
+        var comic_id;
+        var comic_title;
+        var comic_views;
+        var comic_weekview;
+
+        var pos = window.location.href.split("story=");
+        var story = pos[1];
+        if (story == 'undefined' || story == null) story = current_story;
+        $.ajax({
+            url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
+            dataType: 'jsonp',
+            success: function (data) {
+                $.each(data.chapter, function (key, value) {
+                    $(".list-group").append('<a href="view.html?id=' + value.id + '&story=' + story + '">' +
+                            '<li class="list-group-item"><span class="badge">' +
+                            '<span class="ion-chevron-right"></span></span>' +
+                            '<span class="ion-navicon-round"><span class="link-text"> ' + value.title +
+                            '</span></span></li></a>');
+                });
+                $(".loading").hide();
+                $(".thongtintruyen").show();
+                $("#comic_title").html(data.title);
+                $("#thumb").attr("src", "http://comic.apptruyen.com/timthumb.php?src=" + data.thumb + "&w=120&h=180");
+                $("#view").html(data.view);
+                $("#description").html(data.description);
+
+                $("#chapter_total").html(data.chapter_total);
+
+                comic_id = story;
+                comic_title = data.title;
+                comic_views = data.view;
+                comic_weekview = data.view;
+
+                // add comic name to DB
+                html5rocks.indexedDB.open('add', {comicid: story, comicname: comic_title})
+            },
+            error: function () {
+                alert("Error");
+            }
+        });
+        var more = 0;
+        $("#description").click(function () {
+            if (more == 0) {
+                $(".complete").show();
+                $(".more").hide();
+                more = 1;
+            } else {
+                $(".complete").hide();
+                $(".more").show();
+                more = 0;
+            }
+            $("#description").css({
+                'height': 'auto'
+            });
+        });
+        $("#main").show();
+    });
+</script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
 </html>

@@ -18,12 +18,20 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+	
+	<!-- File save at which location -->
+	<preference name="AndroidPersistentFileLocation" value="Internal" />
+	<preference name="iosPersistentFileLocation" value="Library" />
 
     <icon src="icon.png" />
     <gap:splash src="icon.png" />
-    <icon src="icons.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="icons.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="icons.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="icons.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<!-- remove title bar android -->
+    <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<!-- allow access everywhere on internet -->
     <access origin="*" />
 </widget>

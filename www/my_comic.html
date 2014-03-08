@@ -71,13 +71,16 @@
 -->
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/ads.js"></script>
-	<script type="text/javascript" src="js/mycomic.js"></script>
+	<!--<script type="text/javascript" src="js/mycomic.js"></script>-->
+    <script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
+    <script type="text/javascript" src="js/indexeddb.js"></script>
 
 	 <script>
+     // list currently read chapter from DB
+     html5rocks.indexedDB.open('list');
+
 	$(document).ready(function() { 
-        
-        html5rocks.webdb.loadlastread();
-        
+
 		/*$.ajax({
 			 url:"http://comic.apptruyen.com/service.php?action=all",
 			 dataType: 'jsonp', 
