@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="97a08e2e-7d1d-4598-9c13-80b537e17082" name="Default" comment="" />
+    <list default="true" readonly="true" id="97a08e2e-7d1d-4598-9c13-80b537e17082" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+    </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +33,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexeddb.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="indexeddb.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/indexeddb.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="78" column="45" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2397">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="4" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.5709779" vertical-offset="233" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -72,13 +83,13 @@
         <option value="$PROJECT_DIR$/list_comic.html" />
         <option value="$PROJECT_DIR$/js/view-ads.js" />
         <option value="$PROJECT_DIR$/js/ads.js" />
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/js/file.js" />
         <option value="$PROJECT_DIR$/js/mycomic.js" />
         <option value="$PROJECT_DIR$/my_comic.html" />
         <option value="$PROJECT_DIR$/view.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/indexeddb.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -157,14 +168,6 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -173,6 +176,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -253,7 +264,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -326,11 +337,6 @@
         <state line="18" column="4" selection-start="810" selection-end="810" vertical-scroll-proportion="0.074498564" vertical-offset="254" max-vertical-offset="1054" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="55" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.37226278" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ads.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="52" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.08175182" vertical-offset="590" max-vertical-offset="1275" />
@@ -375,6 +381,13 @@
     <entry file="file://$PROJECT_DIR$/js/indexeddb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="45" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="4" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.5709779" vertical-offset="233" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
