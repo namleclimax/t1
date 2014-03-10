@@ -28,10 +28,10 @@
     <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640"  height="1136" />
 	
 	<!-- remove title bar android -->
-    <icon src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
 	
     <icon src="icon.png" />
     <gap:splash src="icon.png" />
