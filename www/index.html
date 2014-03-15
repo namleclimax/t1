@@ -94,10 +94,9 @@
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
 
-<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/function.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<!--<script type="text/javascript" src="js/mycomic.js"></script>-->
 <script type="text/javascript" src="js/ads.js"></script>
 <script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
 <script type="text/javascript" src="js/indexeddb.js"></script>
@@ -121,15 +120,17 @@
         var comic_views;
         var comic_weekview;
 
-        var pos = window.location.href.split("story=");
-        var story = pos[1];
+//        var pos = window.location.href.split("story=");
+//        var story = pos[1];
+        var story = localStorage.getItem('story');
         if (story == 'undefined' || story == null) story = current_story;
         $.ajax({
             url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
             dataType: 'jsonp',
             success: function (data) {
                 $.each(data.chapter, function (key, value) {
-                    $(".list-group").append('<a href="view.html?id=' + value.id + '&story=' + story + '">' +
+
+                    $(".list-group").append('<a href="view.html" onclick="setChapterid('+value.id+', '+story+');">' +
                             '<li class="list-group-item"><span class="badge">' +
                             '<span class="ion-chevron-right"></span></span>' +
                             '<span class="ion-navicon-round"><span class="link-text"> ' + value.title +
@@ -150,7 +151,7 @@
                 comic_weekview = data.view;
 
                 // add comic name to DB
-                html5rocks.indexedDB.open('add', {comicid: story, comicname: comic_title})
+                html5rocks.indexedDB.addCurrentlyRead({comicid: story, comicname: comic_title});
             },
             error: function () {
                 alert("Error");
@@ -173,6 +174,10 @@
         });
         $("#main").show();
     });
+    function setChapterid(chapterid, comicid) {
+        localStorage.setItem('chapterid', chapterid);
+        localStorage.setItem('comicid', comicid);
+    }
 </script>
 <script type="text/javascript">
     app.initialize();

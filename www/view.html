@@ -66,13 +66,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./js/jquery-1.10.2.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="phonegap.js"></script>
-
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/function.js"></script>
 <!--<script type="text/javascript" src="js/ads.js"></script>-->
-<!--<script type="text/javascript" src="js/mycomic.js"></script>-->
 <script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
 <script type="text/javascript" src="js/indexeddb.js"></script>
 
@@ -90,19 +85,23 @@
             current = 0;
             count = 0;
 
-            if (id == 0) {
-                id = GetURLParameter("id");
-            }
-            story = GetURLParameter("story");
+//            if (id == 0) {
+//                id = GetURLParameter("id");
+//            }
+//            var story = GetURLParameter("story");
 
+            var story = localStorage.getItem('comicid');
+            if (id == 0) {
+                var chapterid = localStorage.getItem('chapterid');
+            } else chapterid = id;
 
             $.ajax({
-                url: "http://comic.apptruyen.com/service.php?action=hinh-chapter&id=" + id,
+                url: "http://comic.apptruyen.com/service.php?action=hinh-chapter&id=" + chapterid,
                 dataType: 'jsonp',
                 success: function (data) {
 
                     // save last read chapter to db
-                    html5rocks.indexedDB.open('add', {comicid: story, chapid: id, chapname: data.title});
+                    html5rocks.indexedDB.addCurrentlyRead({comicid: story, chapid: chapterid, chapname: data.title});
 
                     $.each(data.images, function (key, value) {
                         if (count == 0)
@@ -117,7 +116,7 @@
                     previousid = data.previous;
                     nextid = data.next;
                     $(".title").html("<span class='ion-home'></span> " + data.title);
-                    $('.title').attr('href', 'index.html?admob=true&story=' + story);
+                    $('.title').attr('href', 'index.html');//?admob=true&story=' + story);
 
                 },
                 error: function () {

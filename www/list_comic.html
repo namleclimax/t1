@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Xem theo lượt xem: </a>
+            <a class="navbar-brand" href="#">Sắp xếp: </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -89,10 +89,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./js/jquery-1.10.2.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<!--
-	<script type="text/javascript" src="phonegap.js"></script>
--->
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/ads.js"></script>
 <script type="text/javascript" src="js/function.js"></script>
 
@@ -104,13 +100,14 @@
         if(localStorage.order == undefined) localStorage.order = 'view';
         var order = localStorage.order;
 
-        // get json url, server order not client
+        // get json url, server do the sorting not client
         url += '&order=' + order;
 
-        // hightlight order choice
+        // hightlight order choice by CSS class
         $('#nav-' + order).addClass('active');
 
-        var page = GetURLParameter('page');
+//        var page = GetURLParameter('page');
+        var page = localStorage.getItem('page');
         if (page == undefined) page = 1;
         url += '&page=' + page;
         $.ajax({
@@ -120,8 +117,7 @@
                 var title;
 
                 $.each(data.comic, function (key, value) {
-                    var append = '<tr onclick="location.href=\'index.html?story=' + value.id + '\'" ><td>' +
-                            value.title + '</td><td>';
+                    var append = '<tr onclick="gotoIndex(' + value.id + ');" ><td>' + value.title + '</td><td>';
                     var append_end = '</td></tr>';
                     switch (order){
                         case 'view':
@@ -147,13 +143,17 @@
                 // append title with down arrow symbol
                 $('#title').append('<th style="white-space: nowrap">' + title + '<span class="ion-arrow-down-b"/></th>');
 
-                // append 'view more' button
+                var pagingRowHtml = '<tr>';
+                if(page>1){
+                    pagingRowHtml+='<td><a href="list_comic.html" onclick="paging('+(page-1)+');">Trước</a> [Trang '+page+']</td>';
+                } else {
+                    pagingRowHtml+='<td>[Trang '+page+']</td>';
+                }
                 page++;
-                $("#table-ds-truyen").append('<tr onclick="location.href=\'list_comic.html?page=' + (page) + '\'"><td>' +
-                        '<a href="#" >View More</a></td><td></td>');
+                pagingRowHtml+='<td><a href="list_comic.html" onclick="paging('+page+');">Tiếp</a></td>';
 
                 // bottom padding
-                $("#table-ds-truyen").append('<tr><td></td></tr>');
+                $("#table-ds-truyen").append(pagingRowHtml+'</tr><tr><td></td></tr>');
 
                 // hide loading spinner, show content
                 $(".loading").hide();
@@ -189,9 +189,13 @@
             toggleState = 'in';
         }
     }
-</script>
-<script type="text/javascript">
-    app.initialize();
+    function gotoIndex(story){
+        localStorage.setItem('story', story);
+        window.location = 'index.html';
+    }
+    function paging(page){
+        localStorage.setItem('page', page);
+    }
 </script>
 </body>
 </html>
