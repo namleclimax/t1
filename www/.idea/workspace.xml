@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="97a08e2e-7d1d-4598-9c13-80b537e17082" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/568h.png" afterPath="$PROJECT_DIR$/res/screen/568h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/57.png" afterPath="$PROJECT_DIR$/res/icon/57.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/57x2.png" afterPath="$PROJECT_DIR$/res/icon/57x2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/72.png" afterPath="$PROJECT_DIR$/res/icon/72.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/icon/72x2.png" afterPath="$PROJECT_DIR$/res/icon/72x2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/screen/splash.png" afterPath="$PROJECT_DIR$/res/screen/splash.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_comic.html" afterPath="$PROJECT_DIR$/list_comic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view.html" afterPath="$PROJECT_DIR$/view.html" />
     </list>
     <ignored path="www.iws" />
@@ -28,9 +37,9 @@
       <file leaf-file-name="list_comic.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/list_comic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="3519">
+            <state line="192" column="22" selection-start="7086" selection-end="7086" vertical-scroll-proportion="-15.538462" vertical-offset="2860" max-vertical-offset="3519">
               <folding>
-                <marker date="1394614793986" expanded="false" signature="5451:5470" placeholder="..." />
+                <marker date="1394854733760" expanded="false" signature="5451:5470" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -45,19 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="21" selection-start="5674" selection-end="5674" vertical-scroll-proportion="-4.269231" vertical-offset="2592" max-vertical-offset="3264">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://D:/express-master/examples/ejs/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36389685" vertical-offset="254" max-vertical-offset="952">
+            <state line="115" column="8" selection-start="3793" selection-end="3793" vertical-scroll-proportion="0.114583336" vertical-offset="1878" max-vertical-offset="3281">
               <folding />
             </state>
           </provider>
@@ -82,17 +82,17 @@
         <option value="$PROJECT_DIR$/my_comic.html" />
         <option value="$PROJECT_DIR$/js/my_comic.js" />
         <option value="$PROJECT_DIR$/js/indexeddb.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/list_comic.html" />
         <option value="$PROJECT_DIR$/view.html" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/list_comic.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1040" />
+    <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -149,57 +149,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,13 +260,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42008197" sideWeight="0.6698895" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3110774" sideWeight="0.6698895" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.20713201" sideWeight="0.3301105" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31183612" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -396,15 +346,6 @@
         <state line="6" column="41" selection-start="214" selection-end="214" vertical-scroll-proportion="0.1461318" vertical-offset="0" max-vertical-offset="698" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_comic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="3519">
-          <folding>
-            <marker date="1394614793986" expanded="false" signature="5451:5470" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="72" selection-start="698" selection-end="698" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="2873">
@@ -440,16 +381,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://D:/express-master/examples/ejs/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="21" selection-start="5674" selection-end="5674" vertical-scroll-proportion="-4.269231" vertical-offset="2592" max-vertical-offset="3264">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36389685" vertical-offset="254" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/express-master/examples/ejs/index.js">
+    <entry file="file://$PROJECT_DIR$/list_comic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36389685" vertical-offset="254" max-vertical-offset="952">
+        <state line="192" column="22" selection-start="7086" selection-end="7086" vertical-scroll-proportion="-15.538462" vertical-offset="2860" max-vertical-offset="3519">
+          <folding>
+            <marker date="1394854733760" expanded="false" signature="5451:5470" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="8" selection-start="3793" selection-end="3793" vertical-scroll-proportion="0.114583336" vertical-offset="1878" max-vertical-offset="3281">
           <folding />
         </state>
       </provider>
