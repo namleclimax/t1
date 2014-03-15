@@ -35,11 +35,9 @@
 	<!-- iphone 5/5S splash -->
     <gap:splash src="res/screen/568h.png" gap:platform="ios" width="640"  height="1136" />
 	
-	
-    <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
-    <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
-	
+	<icon gap:platform="winphone" src="res/icon/icon.png" />
+    <icon gap:platform="winphone" gap:role="background" src="res/icon/icon.png" />
+    <gap:splash gap:platform="winphone" src="res/screen/splash.png" />
 	
 	<!-- allow access everywhere on internet -->
     <access origin="*" />
