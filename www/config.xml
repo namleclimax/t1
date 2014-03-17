@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="apptruyen.comic.olongvien" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Ô Long Viện</name>
+    <name>Do Re Mon Doraemon</name>
     <description>
-        Truyện xoay quanh ngôi chùa Ô Long Viện (gọi là Thuyền Viện Ô Long chứ nhảy). Tuyến nhân vật rất đa dạng, có gần 1 trăm nhân vật, mỗi người mang một tính cách và đẳng cấp "khùng" khác nhau. Truyện bắt được nhiều yếu tố, điển tích, tích, thuyết cổ xưa và phiều tình tiết hiện đại. Xem lại bạn có thể thấy nhiều tình tiết trong truyện được các đạo diễn trunng Quốc dựng thành các đoạn hài trong film của (có cả Châu Tinh Trì) , Thỉnh thoảng 1 vài truyện cười mang tính triết lý và độ cao thâm sâu sắc.
+        Là câu chuyện kể về chú mèo máy có tên là "Doraemon". Trở về từ thế kỷ 22 để giúp cậu học sinh hậu đậu Nobi Nobita. Cùng trải qua rất nhiều chuyến phiêu lưu với những người bạn tốt bụng: Shizuka (cô bạn nữ duy nhất của nhóm, tốt bụng và dễ thương), Suneo (công tử nhà giàu, có tính khoe khoang nhưng có một tấm lòng tốt), Giant ("ca sĩ" của nhóm, giọng hát tệ cực tệ, hay bắt nạt bạn bè nhất là Nobita nhưng bù lại cậu rất tốt bụng). Cùng với những cuộc phiêu lưu, họ đến những nơi khác nhau, được mô tả bởi Doraemon Long Stories
+		
 </description>
     <author email="info@apptruyen.com" href="http://apptruyen.com">
         App truyen
@@ -29,6 +30,9 @@
 	
     <icon src="res/57.png" gap:platform="ios" width="57"  height="57" />
     <icon src="res/72.png" gap:platform="ios" width="72"  height="72" />
+    <icon src="res/76.png" gap:platform="ios" width="76"  height="76" />
+    <icon src="res/120.png" gap:platform="ios" width="120"  height="120" />
+    <icon src="res/152.png" gap:platform="ios" width="152"  height="152" />
     <gap:splash src="res/screen/splash.png" gap:platform="ios" width="640"  height="1136" />
 	
 	<icon gap:platform="winphone" src="res/icon.png" />
