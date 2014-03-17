@@ -33,6 +33,7 @@
 	<!-- iphone 5/5S splash -->
     <gap:splash src="res/screen/splash.png" gap:platform="ios" width="640"  height="1136" />
 	
+	<icon gap:platform="winphone" src="res/icon/icon.png" />
     <gap:splash gap:platform="winphone" src="res/screen/splash.png" />
 	
 	<!-- allow access everywhere on internet -->
