@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="apptruyen.comic.olongvien" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="apptruyen.comic.olongvien" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Ô Long Viện</name>
     <description>
         Truyện xoay quanh ngôi chùa Ô Long Viện (gọi là Thuyền Viện Ô Long chứ nhảy). Tuyến nhân vật rất đa dạng, có gần 1 trăm nhân vật, mỗi người mang một tính cách và đẳng cấp "khùng" khác nhau. Truyện bắt được nhiều yếu tố, điển tích, tích, thuyết cổ xưa và phiều tình tiết hiện đại. Xem lại bạn có thể thấy nhiều tình tiết trong truyện được các đạo diễn trunng Quốc dựng thành các đoạn hài trong film của (có cả Châu Tinh Trì) , Thỉnh thoảng 1 vài truyện cười mang tính triết lý và độ cao thâm sâu sắc.
@@ -27,6 +27,11 @@
 	<icon src="res/icon/icon.png" />
 	<gap:splash src="res/screen/splash.png" />
 	
+	<!-- ios icon -->
+    <icon src="res/icon/57.png" gap:platform="ios" width="57"  height="57" />
+    <icon src="res/icon/72.png" gap:platform="ios" width="72"  height="72" />
+	<!-- iphone 5/5S splash -->
+    <gap:splash src="res/screen/568h.png" gap:platform="ios" width="640"  height="1136" />
 	
 	<icon gap:platform="winphone" src="res/icon/icon.png" />
     <icon gap:platform="winphone" gap:role="background" src="res/icon/icon.png" />
