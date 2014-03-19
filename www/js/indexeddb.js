@@ -1,9 +1,5 @@
-/**
- * Created by Anh Tuan on 3/8/14.
- */
 
 // namespacing
-
 var html5rocks = {};
 html5rocks.indexedDB = {};
 
@@ -83,17 +79,25 @@ html5rocks.indexedDB.addCurrentlyRead2 = function (parameters) {
         };
 };
 
-html5rocks.indexedDB.addCurrentlyRead = function(parameters){
+html5rocks.addComic = function(comicid, comicname){
 
     // open DB first, because indexdb is async listing will be in callback
     html5rocks.indexedDB.open(function(){
-        html5rocks.indexedDB.addCurrentlyRead2(parameters);
+        html5rocks.indexedDB.addCurrentlyRead2({comicid: comicid, comicname: comicname});
+    });
+};
+
+html5rocks.savelastread = function(comicid, chapid, chapname){
+
+    // open DB first, because indexdb is async listing will be in callback
+    html5rocks.indexedDB.open(function(){
+        html5rocks.indexedDB.addCurrentlyRead2({comicid: comicid, chapid: chapid, chapname: chapname});
     });
 };
 
 //Step 4. Querying the data in a store.
 
-html5rocks.indexedDB.listCurrentlyRead = function () {
+html5rocks.listCurrentlyRead = function () {
 
     // open DB first, because indexdb is async listing will be in callback
     html5rocks.indexedDB.open(function(){
@@ -130,6 +134,3 @@ html5rocks.indexedDB.listCurrentlyRead = function () {
     });
 };
 
-
-// enable debugging with websql shim, must include shim before this file
-window.shimIndexedDB.__debug(true);

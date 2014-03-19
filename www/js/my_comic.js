@@ -4,4 +4,4 @@ function gotoView(chapterid, comicid){
     window.location = 'view.html';
 }
 
-html5rocks.indexedDB.listCurrentlyRead();
+html5rocks.listCurrentlyRead();

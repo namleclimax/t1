@@ -68,8 +68,7 @@
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/function.js"></script>
 <!--<script type="text/javascript" src="js/ads.js"></script>-->
-<script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
-<script type="text/javascript" src="js/indexeddb.js"></script>
+<script type="text/javascript" src="js/storage.js"></script>
 
 <script>
 
@@ -101,7 +100,7 @@
                 success: function (data) {
 
                     // save last read chapter to db
-                    html5rocks.indexedDB.addCurrentlyRead({comicid: story, chapid: chapterid, chapname: data.title});
+                    html5rocks.savelastread(story, chapterid, data.title);
 
                     $.each(data.images, function (key, value) {
                         if (count == 0)

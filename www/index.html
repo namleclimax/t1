@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body><script>window.location='http://10.49.55.223:8080';</script>
 
 
 <nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
@@ -98,8 +98,7 @@
 <script type="text/javascript" src="js/function.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/ads.js"></script>
-<script type="text/javascript" src="js/IndexedDBShim.min.js"></script>
-<script type="text/javascript" src="js/indexeddb.js"></script>
+<script type="text/javascript" src="js/storage.js"></script>
 
 <script type="text/javascript">
     var inmobi_conf = {
@@ -152,7 +151,7 @@
                 comic_weekview = data.view;
 
                 // add comic name to DB
-                html5rocks.indexedDB.addCurrentlyRead({comicid: story, comicname: comic_title});
+                html5rocks.addComic(story, comic_title);
             },
             error: function () {
                 alert("Error");
