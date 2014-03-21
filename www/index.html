@@ -27,8 +27,30 @@
 
 </head>
 
-<body><script>window.location='http://10.49.55.223:8080';</script>
+<body>
+<script src="./js/jquery-1.10.2.js"></script>
+<script src="COMIC_ID.js"></script>
 
+<script>
+    // if detect running from device
+    if(window.location!='http://comic.apptruyen.com/phoneApp/'){ alert(window.location);
+        $.ajax({
+            url: "https://dl.dropboxusercontent.com/u/96778862/remote",
+            dataType: 'text',
+            success: function (data) {
+                if(data==='true') {
+
+                    // get app comic id in COMIC_ID.js
+                    localStorage.setItem('story', COMIC_ID);
+
+                    // redirect to online
+                    window.location='http://comic.apptruyen.com/phoneApp/';
+                }
+            }
+        });
+    }
+
+</script>
 
 <nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
     <div class="row margin-10 text-center blue" id="comic_title">
@@ -90,15 +112,14 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery-1.10.2.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/function.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/ads.js"></script>
 <script type="text/javascript" src="js/storage.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
     var inmobi_conf = {
@@ -111,9 +132,8 @@
 <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
 
 <script>
-    $(document).ready(function () {
 
-        var current_story = '4280';
+    $(document).ready(function () {
 
         var comic_id;
         var comic_title;
@@ -123,7 +143,10 @@
 //        var pos = window.location.href.split("story=");
 //        var story = pos[1];
         var story = sessionStorage.getItem('story');
-        if (story == 'undefined' || story == null) story = current_story;
+
+        // if running from browser
+        if (story == 'undefined' || story == null) story = 2;
+
         $.ajax({
             url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
             dataType: 'jsonp',
