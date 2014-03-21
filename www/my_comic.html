@@ -68,43 +68,9 @@
     <script src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/ads.js"></script>
     <script type="text/javascript" src="js/storage.js"></script>
-    <script src="js/my_comic.js"></script>
-
+    <script src="js/gotoView.js"></script>
 	 <script>
-
-	/*$(document).ready(function() {
-
-		$.ajax({
-			 url:"http://comic.apptruyen.com/service.php?action=all",
-			 dataType: 'jsonp', 
-			 success:function(data){
-				$.each( data.comic, function( key, value ) {
-				$("#table-ds-truyen").append('<tr onclick="location.href=\'index.html?story=' + value.id + '\'" ><td>' + value.title + '</td><td>' + value.views + '</td><td>' + value.weekview + '</td></tr>');
-				});
-				$(".loading").hide(); 
-				
-			 },
-			 error:function(){
-				 alert("Error");
-			 },
-		});
-		var more = 0;
-		$("#description").click(function(){
-			if (more ==0){
-				$(".complete").show();
-				$(".more").hide();
-				more = 1;
-			}else{
-				$(".complete").hide();
-				$(".more").show();
-				more = 0;
-			}
-			$("#description").css({
-					'height': 'auto'
-				});
-		});
-		$("#main").show();
-	});*/
-  </script>
+         html5rocks.listCurrentlyRead();
+	 </script>
   </body>
 </html>

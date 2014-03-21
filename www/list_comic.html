@@ -106,7 +106,7 @@
         // hightlight order choice by CSS class
         $('#nav-' + order).addClass('active');
 
-//        var page = GetURLParameter('page');
+//        var page = getURLParameter('page');
         var page = localStorage.getItem('page');
         if (page == undefined) page = 1;
         url += '&page=' + page;

@@ -66,7 +66,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./js/jquery-1.10.2.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/getUrlParameter.js"></script>
 <!--<script type="text/javascript" src="js/ads.js"></script>-->
 <script type="text/javascript" src="js/storage.js"></script>
 
@@ -84,15 +84,20 @@
             current = 0;
             count = 0;
 
-//            if (id == 0) {
-//                id = GetURLParameter("id");
-//            }
-//            var story = GetURLParameter("story");
+            // if iOS/Android
+            if(typeof openDatabase != 'undefined'){
+                if (id == 0) {
+                    var chapterid = getURLParameter("chapterid");
+                } else chapterid = id;
+                var story = getURLParameter("comicid");
 
-            var story = localStorage.getItem('comicid');
-            if (id == 0) {
-                var chapterid = localStorage.getItem('chapterid');
-            } else chapterid = id;
+            // if WP8
+            } else {
+                story = localStorage.getItem('comicid');
+                if (id == 0) {
+                    chapterid = localStorage.getItem('chapterid');
+                } else chapterid = id;
+            }
 
             $.ajax({
                 url: "http://comic.apptruyen.com/service.php?action=hinh-chapter&id=" + chapterid,

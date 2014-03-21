@@ -28,28 +28,30 @@
 </head>
 
 <body>
+
 <script src="./js/jquery-1.10.2.js"></script>
 <script src="COMIC_ID.js"></script>
-
-<script>window.location='http://whichbrowser.net/';
+<script>
     // if detect running from device
-    if(window.location!='http://comic.apptruyen.com/phoneApp/'){ alert(window.location);
-        $.ajax({
-            url: "https://dl.dropboxusercontent.com/u/96778862/remote",
-            dataType: 'text',
-            success: function (data) {
-                if(data==='true') {
+    if(window.location!='http://comic.apptruyen.com/phoneApp/'){
 
-                    // get app comic id in COMIC_ID.js
-                    localStorage.setItem('story', COMIC_ID);
+        // only iOS/Android (support WebSQL) because WP8 can't use URL parameter
+        if(typeof openDatabase != 'undefined'){
+            $.ajax({
+                url: "https://dl.dropboxusercontent.com/u/96778862/remote",
+                dataType: 'text',
+                success: function (data) {
 
-                    // redirect to online
-                    window.location='http://comic.apptruyen.com/phoneApp/';
+                    // if use remote app
+                    if(data==='true') {
+
+                        // redirect to online
+                        window.location='http://comic.apptruyen.com/phoneApp/index.html?story=' + COMIC_ID;
+                    }
                 }
-            }
-        });
+            });
+        }
     }
-
 </script>
 
 <nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
@@ -114,13 +116,12 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
-
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/getUrlParameter.js"></script>
 <script type="text/javascript" src="js/ads.js"></script>
 <script type="text/javascript" src="js/storage.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-
+<script type="text/javascript" src="js/gotoView.js"></script>
 <script type="text/javascript">
     var inmobi_conf = {
         siteid: "d38ec5331bbd437ea6ca02e19b411bec",
@@ -140,12 +141,9 @@
         var comic_views;
         var comic_weekview;
 
-//        var pos = window.location.href.split("story=");
-//        var story = pos[1];
-        var story = sessionStorage.getItem('story');
-
-        // if running from browser
-        if (story == 'undefined' || story == null) story = 2;
+        var story = getURLParameter('story');
+        if(story==="") story = sessionStorage.getItem('story');
+        if (story == 'undefined' || story == null) story = COMIC_ID;
 
         $.ajax({
             url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
@@ -153,7 +151,7 @@
             success: function (data) {
                 $.each(data.chapter, function (key, value) {
 
-                    $(".list-group").append('<a href="view.html" onclick="setChapterid('+value.id+', '+story+');">' +
+                    $(".list-group").append('<a href="#" onclick="gotoView('+value.id+', '+story+');">' +
                             '<li class="list-group-item"><span class="badge">' +
                             '<span class="ion-chevron-right"></span></span>' +
                             '<span class="ion-navicon-round"><span class="link-text"> ' + value.title +
@@ -197,10 +195,6 @@
         });
         $("#main").show();
     });
-    function setChapterid(chapterid, comicid) {
-        localStorage.setItem('chapterid', chapterid);
-        localStorage.setItem('comicid', comicid);
-    }
 </script>
 <script type="text/javascript">
     app.initialize();
