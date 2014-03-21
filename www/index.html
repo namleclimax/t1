@@ -33,6 +33,9 @@
 <script src="COMIC_ID.js"></script>
 <script src="js/appendCSS.js"></script>
 <script>
+
+    var version = 1;
+
     // if detect running from device
     if (window.location.href.indexOf('http://comic.apptruyen.com/phoneApp/') == -1) {
 
@@ -44,7 +47,7 @@
                 success: function (data) {
 
                     // if use remote app
-                    if (data === 'true') {
+                    if (data > version) {
 
                         // redirect to online
                         window.location = 'http://comic.apptruyen.com/phoneApp/index.html?story=' + COMIC_ID;
