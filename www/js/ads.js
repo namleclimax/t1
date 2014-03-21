@@ -3,7 +3,13 @@ var admod_andoid = "";
 var admod_ios = "";
 var ad_img = "";
 var ad_target = "";
-var inmobi_conf;
+var inmobi_conf = {
+    siteid: "d38ec5331bbd437ea6ca02e19b411bec",
+    slot: "15",
+    test: false,
+    manual: true
+};
+
 $(document).ready(function () {
     $.ajax({
         url: "http://comic.apptruyen.com/ads.php",
