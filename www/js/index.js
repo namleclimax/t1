@@ -30,23 +30,5 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        $.ajax({
-            url: "https://drive.google.com/file/d/0BxiSPCgEtiuGSnFkcC1sZVd5ZTA/edit?usp=sharing",
-            dataType: 'text',
-            success: function (data) {
-                alert(data);
-            }
-        });
     }
-
-
-
-
 };
-$.ajax({
-    url: "http://comic.apptruyen.com/phoneApp/remote.json",
-    dataType: 'jsonp',
-    success: function (data) {
-        alert(data);
-    }
-});

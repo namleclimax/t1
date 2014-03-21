@@ -9,8 +9,6 @@
 
     <title>Comic Vietnam</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -28,25 +26,28 @@
 </head>
 
 <body>
-
+<div id="loading"
+     style="position: absolute;z-index: 9999;width: 100%;height: 100%;left: 0px;top: 0px;background-color: #ffffff;">
+     </div>
 <script src="./js/jquery-1.10.2.js"></script>
 <script src="COMIC_ID.js"></script>
+<script src="js/appendCSS.js"></script>
 <script>
     // if detect running from device
-    if(window.location!='http://comic.apptruyen.com/phoneApp/'){
+    if (window.location.href.indexOf('http://comic.apptruyen.com/phoneApp/') == -1) {
 
         // only iOS/Android (support WebSQL) because WP8 can't use URL parameter
-        if(typeof openDatabase != 'undefined'){
+        if (typeof openDatabase != 'undefined') {
             $.ajax({
                 url: "https://dl.dropboxusercontent.com/u/96778862/remote",
                 dataType: 'text',
                 success: function (data) {
 
                     // if use remote app
-                    if(data==='true') {
+                    if (data === 'true') {
 
                         // redirect to online
-                        window.location='http://comic.apptruyen.com/phoneApp/index.html?story=' + COMIC_ID;
+                        window.location = 'http://comic.apptruyen.com/phoneApp/index.html?story=' + COMIC_ID;
                     }
                 }
             });
@@ -62,7 +63,6 @@
 
 
 <div class="container-fluid">
-    <div class="loading"><img src="./images/ajax-loader.gif"></div>
     <div class="thongtintruyen">
         <img itemprop="image" src="" id="thumb">
         <ul class="list-unstyled">
@@ -133,67 +133,63 @@
 <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
 
 <script>
+    var comic_id;
+    var comic_title;
+    var comic_views;
+    var comic_weekview;
 
-    $(document).ready(function () {
+    var story = getURLParameter('story');
+    if (story === "") story = sessionStorage.getItem('story');
+    if (story == 'undefined' || story == null) story = COMIC_ID;
 
-        var comic_id;
-        var comic_title;
-        var comic_views;
-        var comic_weekview;
+    $.ajax({
+        url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
+        dataType: 'jsonp',
+        success: function (data) {
+            $.each(data.chapter, function (key, value) {
 
-        var story = getURLParameter('story');
-        if(story==="") story = sessionStorage.getItem('story');
-        if (story == 'undefined' || story == null) story = COMIC_ID;
-
-        $.ajax({
-            url: "http://comic.apptruyen.com/service.php?action=detail_story&id=" + story,
-            dataType: 'jsonp',
-            success: function (data) {
-                $.each(data.chapter, function (key, value) {
-
-                    $(".list-group").append('<a href="#" onclick="gotoView('+value.id+', '+story+');">' +
-                            '<li class="list-group-item"><span class="badge">' +
-                            '<span class="ion-chevron-right"></span></span>' +
-                            '<span class="ion-navicon-round"><span class="link-text"> ' + value.title +
-                            '</span></span></li></a>');
-                });
-                $(".loading").hide();
-                $(".thongtintruyen").show();
-                $("#comic_title").html(data.title);
-                $("#thumb").attr("src", "http://comic.apptruyen.com/timthumb.php?src=" + data.thumb + "&w=120&h=180");
-                $("#view").html(data.view);
-                $("#description").html(data.description);
-
-                $("#chapter_total").html(data.chapter_total);
-
-                comic_id = story;
-                comic_title = data.title;
-                comic_views = data.view;
-                comic_weekview = data.view;
-
-                // add comic name to DB
-                html5rocks.addComic(story, comic_title);
-            },
-            error: function () {
-                alert("Error");
-            }
-        });
-        var more = 0;
-        $("#description").click(function () {
-            if (more == 0) {
-                $(".complete").show();
-                $(".more").hide();
-                more = 1;
-            } else {
-                $(".complete").hide();
-                $(".more").show();
-                more = 0;
-            }
-            $("#description").css({
-                'height': 'auto'
+                $(".list-group").append('<a href="#" onclick="gotoView(' + value.id + ', ' + story + ');">' +
+                        '<li class="list-group-item"><span class="badge">' +
+                        '<span class="ion-chevron-right"></span></span>' +
+                        '<span class="ion-navicon-round"><span class="link-text"> ' + value.title +
+                        '</span></span></li></a>');
             });
+            $(".thongtintruyen").show();
+            $("#comic_title").html(data.title);
+            $("#thumb").attr("src", "http://comic.apptruyen.com/timthumb.php?src=" + data.thumb + "&w=120&h=180");
+            $("#view").html(data.view);
+            $("#description").html(data.description);
+
+            $("#chapter_total").html(data.chapter_total);
+
+            comic_id = story;
+            comic_title = data.title;
+            comic_views = data.view;
+            comic_weekview = data.view;
+
+            // add comic name to DB
+            html5rocks.addComic(story, comic_title);
+
+            $('#loading').hide();
+        },
+        error: function () {
+            alert("Error");
+        }
+    });
+    var more = 0;
+    $("#description").click(function () {
+        if (more == 0) {
+            $(".complete").show();
+            $(".more").hide();
+            more = 1;
+        } else {
+            $(".complete").hide();
+            $(".more").show();
+            more = 0;
+        }
+        $("#description").css({
+            'height': 'auto'
         });
-        $("#main").show();
     });
 </script>
 <script type="text/javascript">
