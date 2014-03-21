@@ -26,6 +26,8 @@
 </head>
 
 <body>
+<script src="./js/jquery-1.10.2.js"></script>
+<script src="js/appendCSS.js"></script>
 
 <nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
     <div class="row margin-10">
@@ -62,7 +64,6 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery-1.10.2.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/getUrlParameter.js"></script>
 <!--<script type="text/javascript" src="js/ads.js"></script>-->
@@ -82,20 +83,20 @@
             current = 0;
             count = 0;
 
-            // if iOS/Android
-            if(typeof openDatabase != 'undefined'){
+//            // if WP8
+//            if(typeof openDatabase == 'undefined'){
+                var story = localStorage.getItem('comicid');
                 if (id == 0) {
-                    var chapterid = getURLParameter("chapterid");
+                    var chapterid = localStorage.getItem('chapterid');
                 } else chapterid = id;
-                var story = getURLParameter("comicid");
 
-            // if WP8
-            } else {
-                story = localStorage.getItem('comicid');
-                if (id == 0) {
-                    chapterid = localStorage.getItem('chapterid');
-                } else chapterid = id;
-            }
+//            // if iOS/Android
+//            } else {
+//                if (id == 0) {
+//                    chapterid = getURLParameter("chapterid");
+//                } else chapterid = id;
+//                story = getURLParameter("comicid");
+//            }
 
             $.ajax({
                 url: "http://comic.apptruyen.com/service.php?action=hinh-chapter&id=" + chapterid,

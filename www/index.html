@@ -51,8 +51,8 @@
                     }
                 }
             });
-        }
-    }
+        } else $('#loading').hide();
+    } else $('#loading').hide();
 </script>
 
 <nav class="navbar navbar-default navbar-fixed-top opacity_50" role="navigation">
@@ -170,7 +170,6 @@
             // add comic name to DB
             html5rocks.addComic(story, comic_title);
 
-            $('#loading').hide();
         },
         error: function () {
             alert("Error");
